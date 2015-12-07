@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-RegressionSuite">
+              <span class="suite-name border-passed">RegressionSuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-RegressionSuite">
+                    <span>D:\SOFTWARE TESTING\TECHNOSOFT\Workspace\TimewarnercableTest\src\main\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-RegressionSuite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-RegressionSuite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-RegressionSuite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-RegressionSuite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-RegressionSuite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-RegressionSuite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">5 methods,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-RegressionSuite" class="hide-methods passed suite-RegressionSuite"> (hide)</a> <!-- hide-methods passed suite-RegressionSuite -->
+                      <a href="#" panel-name="suite-RegressionSuite" class="show-methods passed suite-RegressionSuite"> (show)</a> <!-- show-methods passed suite-RegressionSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-RegressionSuite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin" hash-for-method="InvalidEmailLogin">InvalidEmailLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode" hash-for-method="validateCurrentLocation">validateCurrentLocation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality" hash-for-method="validateSearch">validateSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks" hash-for-method="varifyHeader">varifyHeader</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-RegressionSuite" title="com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin" hash-for-method="verifyInvalidLogin">verifyInvalidLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-RegressionSuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-RegressionSuite" class="panel RegressionSuite">
+          <div class="suite-RegressionSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyInvalidLogin">
+                  </a> <!-- verifyInvalidLogin -->
+                  <span class="method-name">verifyInvalidLogin</span>
+                  <em>
+(Verify and Validate Invalid Login and error message)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RegressionSuite-class-passed -->
+          <div class="suite-RegressionSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateSearch">
+                  </a> <!-- validateSearch -->
+                  <span class="method-name">validateSearch</span>
+                  <em>
+(Validate Search Functionality)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RegressionSuite-class-passed -->
+          <div class="suite-RegressionSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="InvalidEmailLogin">
+                  </a> <!-- InvalidEmailLogin -->
+                  <span class="method-name">InvalidEmailLogin</span>
+                  <em>
+(Validate Invalid Email Login)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RegressionSuite-class-passed -->
+          <div class="suite-RegressionSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateCurrentLocation">
+                  </a> <!-- validateCurrentLocation -->
+                  <span class="method-name">validateCurrentLocation</span>
+                  <em>
+(Validate Current Location Zipcode)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RegressionSuite-class-passed -->
+          <div class="suite-RegressionSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="varifyHeader">
+                  </a> <!-- varifyHeader -->
+                  <span class="method-name">varifyHeader</span>
+                  <em>
+(verify all header links)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-RegressionSuite-class-passed -->
+        </div> <!-- panel RegressionSuite -->
+        <div panel-name="test-xml-RegressionSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\SOFTWARE TESTING\TECHNOSOFT\Workspace\TimewarnercableTest\src\main\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;RegressionSuite&quot; parallel=&quot;none&quot;&gt;
+  &lt;test name=&quot;TWCTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks&quot;/&gt;
+      &lt;class name=&quot;com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin&quot;/&gt;
+      &lt;class name=&quot;com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode&quot;/&gt;
+      &lt;class name=&quot;com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality&quot;/&gt;
+      &lt;class name=&quot;com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- TWCTest --&gt;
+&lt;/suite&gt; &lt;!-- RegressionSuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-RegressionSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for RegressionSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">TWCTest (5 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-RegressionSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for RegressionSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-RegressionSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for RegressionSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_RegressionSuite');
+function tableData_RegressionSuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(5);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'validateCurrentLocation')
+data.setCell(0, 2, 'com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode')
+data.setCell(0, 3, 148925);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'InvalidEmailLogin')
+data.setCell(1, 2, 'com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin')
+data.setCell(1, 3, 23296);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'varifyHeader')
+data.setCell(2, 2, 'com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks')
+data.setCell(2, 3, 19644);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'validateSearch')
+data.setCell(3, 2, 'com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality')
+data.setCell(3, 3, 18129);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyInvalidLogin')
+data.setCell(4, 2, 'com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin')
+data.setCell(4, 3, 8541);
+window.suiteTableData['RegressionSuite']= { tableData: data, tableDiv: 'times-div-RegressionSuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <div id="times-div-RegressionSuite">
+              </div> <!-- times-div-RegressionSuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-RegressionSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for RegressionSuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">validateCurrentLocation</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p</span>
+                <span class="reporter-method-output">No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p</span>
+                <span class="reporter-method-output">No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p</span>
+                <span class="reporter-method-output">No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-RegressionSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">8 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUp</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-RegressionSuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">varifyHeader</span>
+                <span class="method-start">24661 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">handleScreenShot([TestResult name=varifyHeader status=SUCCESS method=TS001_TC001_VerifyHeaderLinks.varifyHeader()[pri...)</span>
+                <span class="method-start">44308 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">verifyInvalidLogin</span>
+                <span class="method-start">44354 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">handleScreenShot([TestResult name=verifyInvalidLogin status=SUCCESS method=TS001_TC002_VerifyInvalidLogin.verifyInval...)</span>
+                <span class="method-start">52895 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">validateCurrentLocation</span>
+                <span class="method-start">52910 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">handleScreenShot([TestResult name=validateCurrentLocation status=SUCCESS method=TS001_TC003_ValidateCurrentLocationZi...)</span>
+                <span class="method-start">201835 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">validateSearch</span>
+                <span class="method-start">201850 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">handleScreenShot([TestResult name=validateSearch status=SUCCESS method=TS001_TC004_ValidateSearchFunctionality.valida...)</span>
+                <span class="method-start">219979 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <span class="method-name">InvalidEmailLogin</span>
+                <span class="method-start">219984 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">handleScreenShot([TestResult name=InvalidEmailLogin status=SUCCESS method=TS001_TC005_ValidateInvalidEmailLogin.Inval...)</span>
+                <span class="method-start">243280 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">243311 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

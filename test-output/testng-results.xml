@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="20127" started-at="2015-12-07T16:03:23Z" finished-at="2015-12-07T16:03:43Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="20127" started-at="2015-12-07T16:03:23Z" finished-at="2015-12-07T16:03:43Z">
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@13969fbe]" name="setUp" is-config="true" duration-ms="21584" started-at="2015-12-07T11:03:01Z" finished-at="2015-12-07T11:03:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="varifyHeader()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@13969fbe]" name="varifyHeader" duration-ms="20059" started-at="2015-12-07T11:03:23Z" description="verify all header links" finished-at="2015-12-07T11:03:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- varifyHeader -->
+        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@13969fbe]" name="handleScreenShot" is-config="true" duration-ms="32" started-at="2015-12-07T11:03:43Z" finished-at="2015-12-07T11:03:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=varifyHeader status=SUCCESS method=TS001_TC001_VerifyHeaderLinks.varifyHeader()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@13969fbe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- handleScreenShot -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@13969fbe]" name="tearDown" is-config="true" duration-ms="74" started-at="2015-12-07T11:03:43Z" finished-at="2015-12-07T11:03:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

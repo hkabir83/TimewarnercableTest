@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [RegressionSuite]" parallel="none">
+  <test name="TWCTest(failed)" parallel="none">
+    <classes>
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin">
+        <methods>
+          <include name="verifyInvalidLogin"/>
+          <include name="handleScreenShot"/>
+        </methods>
+      </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin -->
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality">
+        <methods>
+          <include name="validateSearch"/>
+          <include name="handleScreenShot"/>
+        </methods>
+      </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality -->
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin">
+        <methods>
+          <include name="handleScreenShot"/>
+          <include name="InvalidEmailLogin"/>
+        </methods>
+      </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin -->
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode">
+        <methods>
+          <include name="validateCurrentLocation"/>
+          <include name="handleScreenShot"/>
+        </methods>
+      </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode -->
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="handleScreenShot"/>
+        </methods>
+      </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks -->
+    </classes>
+  </test> <!-- TWCTest(failed) -->
+</suite> <!-- Failed suite [RegressionSuite] -->

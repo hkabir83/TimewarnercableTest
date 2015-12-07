@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="RegressionSuite" parallel="none">
+  <test name="TWCTest">
+    <classes>
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks"/>
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin"/>
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode"/>
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality"/>
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin"/>
+    </classes>
+  </test> <!-- TWCTest -->
+</suite> <!-- RegressionSuite -->

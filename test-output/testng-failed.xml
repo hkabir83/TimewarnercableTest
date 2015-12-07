@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode">
+        <methods>
+          <include name="validateCurrentLocation"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="handleScreenShot"/>
+        </methods>
+      </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
