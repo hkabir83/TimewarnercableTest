@@ -1,6 +1,7 @@
 package com.timewarnercable.TimewarnercableTest.pages;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -63,6 +64,7 @@ public class LandingScreen extends BasePage {
 	public void clickOnAboutUs() {
 		clickButton(getXpath(), aboutUs, "Click on about us link", getNo(),
 				"Unable to click on About Us link");
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 	}
 
 	public void clickOnMyAccountButton() {
@@ -152,6 +154,7 @@ public class LandingScreen extends BasePage {
 	}
 
 	public void enterUsername(String value) {
+		waitUntilElementVisible(By.name(username), 20);
 		enterDataIntoTextField(getName(), username, value,
 				"Entered username as " + value, getNo(),
 				"Unable to enter username");
@@ -269,6 +272,7 @@ public class LandingScreen extends BasePage {
 	}
 
 	public void verifyAboutUsPage() {
+		waitUntilElementVisible("About Us", 20);
 		String pageTitle = driver.getTitle();
 		assertValue(pageTitle.contains("About Us"),
 				"Verify About Us page by clicking the 'About Us' link",
@@ -276,6 +280,9 @@ public class LandingScreen extends BasePage {
 	}
 
 	public void verifyLoginErrorMessage() {
+		
+		waitUntilElementVisible(By.xpath(errorMessage), 20);
+		
 		String actualErrorMsg = getPageText(getXpath(), errorMessage,
 				"Got actual login error message", getNo(),
 				"Unable to find Login error text");
@@ -348,6 +355,9 @@ public class LandingScreen extends BasePage {
 	}
 
 	public void VerifySearchResult(String input1) {
+		
+		waitUntilElementVisible(By.xpath(searchResultText), 40);
+		
 		String searchText = getPageText(getXpath(), searchResultText,
 				"Got Search text from search result", getNo(),
 				"Unable to retrive Search text from search result");
@@ -362,6 +372,9 @@ public class LandingScreen extends BasePage {
 	}
 
 	public void VerifySearchErrorMessage() {
+		
+		waitUntilElementVisible(By.xpath(searchResultErrorText), 20);
+		
 		String searchErrText = getPageText(getXpath(), searchResultErrorText,
 				"Got Search error text from search result", getNo(),
 				"Unable to retrive Search error text from search result");

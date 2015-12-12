@@ -3,7 +3,6 @@ package com.timewarnercable.TimewarnercableTest.utilities;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.tools.ant.taskdefs.WaitFor.Unit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
@@ -163,6 +162,14 @@ public class BasePage extends TimeWarnerCableDriver {
 
 				Actions action = new Actions(driver);
 				action.moveToElement(parent).moveToElement(child).click().sendKeys(value).build().perform();
+				/*//or we can write like this
+				Action allAction = action
+						.moveToElement(parent)
+						.moveToElement(child)
+						.click()
+						.sendKeys(value)
+						.build();
+				allAction.perform();*/
 				getPass(passMessage);
 			} catch (NoSuchElementException | TimeoutException e) {
 				getShowStopperStatus(blocker, errorMessage);
@@ -199,11 +206,19 @@ public class BasePage extends TimeWarnerCableDriver {
 		return text;
 	}
 
+
+	
 	// Explici wait
 	public void waitUntilElementVisible(By locator, int timeout){
 		WebDriverWait expectedWaits = new WebDriverWait(driver, timeout);
 		expectedWaits.pollingEvery(3, TimeUnit.SECONDS);
 		expectedWaits.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	}
+	
+	public void waitUntilElementVisible(String title, int timeout){
+		WebDriverWait expectedWaits = new WebDriverWait(driver, timeout);
+		expectedWaits.pollingEvery(3, TimeUnit.SECONDS);
+		expectedWaits.until(ExpectedConditions.titleContains(title));
 	}
 	
 	//Fluent Wait
