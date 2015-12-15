@@ -2,28 +2,25 @@
 <testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
     <line>
-      <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p]]>
+      <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys oof-error-content']/self::div//p[2]]]>
     </line>
     <line>
-      <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p]]>
+      <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys oof-error-content']/self::div//p[2]]]>
     </line>
     <line>
-      <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p]]>
-    </line>
-    <line>
-      <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p]]>
+      <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys oof-error-content']/self::div//p[2]]]>
     </line>
   </reporter-output>
-  <suite name="RegressionSuite" duration-ms="218643" started-at="2015-12-07T03:49:20Z" finished-at="2015-12-07T03:52:59Z">
+  <suite name="RegressionSuite" duration-ms="129070" started-at="2015-12-15T00:52:58Z" finished-at="2015-12-15T00:55:07Z">
     <groups>
     </groups>
-    <test name="TWCTest" duration-ms="218643" started-at="2015-12-07T03:49:20Z" finished-at="2015-12-07T03:52:59Z">
+    <test name="TWCTest" duration-ms="129070" started-at="2015-12-15T00:52:58Z" finished-at="2015-12-15T00:55:07Z">
       <class name="com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin">
-        <test-method status="PASS" signature="verifyInvalidLogin()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin@42d3bd8b]" name="verifyInvalidLogin" duration-ms="8541" started-at="2015-12-06T22:49:40Z" description="Verify and Validate Invalid Login and error message" finished-at="2015-12-06T22:49:48Z">
+        <test-method status="PASS" signature="verifyInvalidLogin()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin@42d3bd8b]" name="verifyInvalidLogin" duration-ms="11091" started-at="2015-12-14T19:53:22Z" description="Verify and Validate Invalid Login and error message" finished-at="2015-12-14T19:53:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyInvalidLogin -->
-        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin@42d3bd8b]" name="handleScreenShot" is-config="true" duration-ms="14" started-at="2015-12-06T22:49:48Z" finished-at="2015-12-06T22:49:48Z">
+        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin@42d3bd8b]" name="handleScreenShot" is-config="true" duration-ms="15" started-at="2015-12-14T19:53:33Z" finished-at="2015-12-14T19:53:33Z">
           <params>
             <param index="0">
               <value>
@@ -35,41 +32,38 @@
           </reporter-output>
         </test-method> <!-- handleScreenShot -->
       </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin -->
-      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode">
-        <test-method status="PASS" signature="validateCurrentLocation()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode@26ba2a48]" name="validateCurrentLocation" duration-ms="148925" started-at="2015-12-06T22:49:48Z" description="Validate Current Location Zipcode" finished-at="2015-12-06T22:52:17Z">
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocation">
+        <test-method status="PASS" signature="validateCurrentZipLocation()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocation@26ba2a48]" name="validateCurrentZipLocation" duration-ms="61539" started-at="2015-12-14T19:53:33Z" description="Validate Current Location Zipcode" finished-at="2015-12-14T19:54:34Z">
           <reporter-output>
             <line>
-              <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p]]>
+              <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys oof-error-content']/self::div//p[2]]]>
             </line>
             <line>
-              <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p]]>
+              <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys oof-error-content']/self::div//p[2]]]>
             </line>
             <line>
-              <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p]]>
-            </line>
-            <line>
-              <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p]]>
+              <![CDATA[No Such Element Found Exception Occured on: xpath //div[@class='parsys oof-error-content']/self::div//p[2]]]>
             </line>
           </reporter-output>
-        </test-method> <!-- validateCurrentLocation -->
-        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode@26ba2a48]" name="handleScreenShot" is-config="true" duration-ms="15" started-at="2015-12-06T22:52:17Z" finished-at="2015-12-06T22:52:17Z">
+        </test-method> <!-- validateCurrentZipLocation -->
+        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocation@26ba2a48]" name="handleScreenShot" is-config="true" duration-ms="32" started-at="2015-12-14T19:54:34Z" finished-at="2015-12-14T19:54:34Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateCurrentLocation status=SUCCESS method=TS001_TC003_ValidateCurrentLocationZipcode.validateCurrentLocation()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode@26ba2a48] output=No Such Element Found Exception Occured on: xpath //div[@class='parsys localized-content']//p]]]>
+                <![CDATA[[TestResult name=validateCurrentZipLocation status=SUCCESS method=TS001_TC003_ValidateCurrentLocation.validateCurrentZipLocation()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocation@26ba2a48] output=No Such Element Found Exception Occured on: xpath //div[@class='parsys oof-error-content']/self::div//p[2]]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleScreenShot -->
-      </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode -->
+      </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocation -->
       <class name="com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin">
-        <test-method status="PASS" signature="InvalidEmailLogin()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin@3b81a1bc]" name="InvalidEmailLogin" duration-ms="23296" started-at="2015-12-06T22:52:35Z" description="Validate Invalid Email Login" finished-at="2015-12-06T22:52:59Z">
+        <test-method status="PASS" signature="InvalidEmailLogin()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin@3b81a1bc]" name="InvalidEmailLogin" duration-ms="13619" started-at="2015-12-14T19:54:53Z" description="Validate Invalid Email Login" finished-at="2015-12-14T19:55:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidEmailLogin -->
-        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin@3b81a1bc]" name="handleScreenShot" is-config="true" duration-ms="16" started-at="2015-12-06T22:52:59Z" finished-at="2015-12-06T22:52:59Z">
+        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin@3b81a1bc]" name="handleScreenShot" is-config="true" duration-ms="16" started-at="2015-12-14T19:55:07Z" finished-at="2015-12-14T19:55:07Z">
           <params>
             <param index="0">
               <value>
@@ -82,15 +76,15 @@
         </test-method> <!-- handleScreenShot -->
       </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin -->
       <class name="com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@3d8c7aca]" name="setUp" is-config="true" duration-ms="24652" started-at="2015-12-06T22:48:55Z" finished-at="2015-12-06T22:49:20Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@3d8c7aca]" name="setUp" is-config="true" duration-ms="66191" started-at="2015-12-14T19:51:52Z" finished-at="2015-12-14T19:52:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="varifyHeader()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@3d8c7aca]" name="varifyHeader" duration-ms="19644" started-at="2015-12-06T22:49:20Z" description="verify all header links" finished-at="2015-12-06T22:49:40Z">
+        <test-method status="PASS" signature="varifyHeader()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@3d8c7aca]" name="varifyHeader" duration-ms="23856" started-at="2015-12-14T19:52:58Z" description="verify all header links" finished-at="2015-12-14T19:53:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- varifyHeader -->
-        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@3d8c7aca]" name="handleScreenShot" is-config="true" duration-ms="45" started-at="2015-12-06T22:49:40Z" finished-at="2015-12-06T22:49:40Z">
+        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@3d8c7aca]" name="handleScreenShot" is-config="true" duration-ms="47" started-at="2015-12-14T19:53:22Z" finished-at="2015-12-14T19:53:22Z">
           <params>
             <param index="0">
               <value>
@@ -101,17 +95,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- handleScreenShot -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@3d8c7aca]" name="tearDown" is-config="true" duration-ms="47" started-at="2015-12-06T22:52:59Z" finished-at="2015-12-06T22:52:59Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks@3d8c7aca]" name="tearDown" is-config="true" duration-ms="16" started-at="2015-12-14T19:55:07Z" finished-at="2015-12-14T19:55:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks -->
       <class name="com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality">
-        <test-method status="PASS" signature="validateSearch()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality@5f2050f6]" name="validateSearch" duration-ms="18129" started-at="2015-12-06T22:52:17Z" description="Validate Search Functionality" finished-at="2015-12-06T22:52:35Z">
+        <test-method status="PASS" signature="validateSearch()[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality@5f2050f6]" name="validateSearch" duration-ms="18823" started-at="2015-12-14T19:54:34Z" description="Validate Search Functionality" finished-at="2015-12-14T19:54:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateSearch -->
-        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality@5f2050f6]" name="handleScreenShot" is-config="true" duration-ms="4" started-at="2015-12-06T22:52:35Z" finished-at="2015-12-06T22:52:35Z">
+        <test-method status="PASS" signature="handleScreenShot(org.testng.ITestResult)[pri:0, instance:com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality@5f2050f6]" name="handleScreenShot" is-config="true" duration-ms="0" started-at="2015-12-14T19:54:53Z" finished-at="2015-12-14T19:54:53Z">
           <params>
             <param index="0">
               <value>

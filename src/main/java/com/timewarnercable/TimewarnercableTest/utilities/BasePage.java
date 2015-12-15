@@ -98,6 +98,7 @@ public class BasePage extends TimeWarnerCableDriver {
 		List<WebElement> element = null;
 		try {
 			element = getElements(locator, attributeOfLocator);
+			if(!info.equals(""))
 			getInfo(info);
 		} catch (NoSuchElementException | TimeoutException e) {
 			getShowStopperStatus(blocker, errorMessage);
@@ -118,7 +119,7 @@ public class BasePage extends TimeWarnerCableDriver {
 			getShowStopperStatus(blocker, errorMessage);
 		}
 	}
-
+	
 	// This method is used to click button with hover
 	public void clickButtonWithHover(String parentLocator,
 			String parentAttribute, String childLocator, String childAttribute,
@@ -150,32 +151,33 @@ public class BasePage extends TimeWarnerCableDriver {
 		}
 
 	}
+
 	
+
 	// This method is used for entering text on text field with hover
-		public void enterDataIntoTextFieldWithHover(String parentLocator,
-				String parentAttribute, String childLocator, String childAttribute, String value,
-				String passMessage, String blocker, String errorMessage) {
+	public void enterDataIntoTextFieldWithHover(String parentLocator,
+			String parentAttribute, String childLocator, String childAttribute,
+			String value, String passMessage, String blocker,
+			String errorMessage) {
 
-			try {
-				WebElement parent = getElement(parentLocator, parentAttribute);
-				WebElement child = getElement(childLocator, childAttribute);
+		try {
+			WebElement parent = getElement(parentLocator, parentAttribute);
+			WebElement child = getElement(childLocator, childAttribute);
 
-				Actions action = new Actions(driver);
-				action.moveToElement(parent).moveToElement(child).click().sendKeys(value).build().perform();
-				/*//or we can write like this
-				Action allAction = action
-						.moveToElement(parent)
-						.moveToElement(child)
-						.click()
-						.sendKeys(value)
-						.build();
-				allAction.perform();*/
-				getPass(passMessage);
-			} catch (NoSuchElementException | TimeoutException e) {
-				getShowStopperStatus(blocker, errorMessage);
-			}
-
+			Actions action = new Actions(driver);
+			action.moveToElement(parent).moveToElement(child).click()
+					.sendKeys(value).build().perform();
+			/*
+			 * //or we can write like this Action allAction = action
+			 * .moveToElement(parent) .moveToElement(child) .click()
+			 * .sendKeys(value) .build(); allAction.perform();
+			 */
+			getPass(passMessage);
+		} catch (NoSuchElementException | TimeoutException e) {
+			getShowStopperStatus(blocker, errorMessage);
 		}
+
+	}
 
 	// This method is used for clearing text field
 	public void clearTextField(String locator, String attributeOfLocator,
@@ -189,6 +191,8 @@ public class BasePage extends TimeWarnerCableDriver {
 			e.printStackTrace();
 		}
 	}
+	
+	
 
 	// Get text from page
 	public String getPageText(String locator, String attributeOfLocator,
@@ -206,38 +210,47 @@ public class BasePage extends TimeWarnerCableDriver {
 		return text;
 	}
 
-
-	
-	// Explici wait
-	public void waitUntilElementVisible(By locator, int timeout){
-		WebDriverWait expectedWaits = new WebDriverWait(driver, timeout);
-		expectedWaits.pollingEvery(3, TimeUnit.SECONDS);
-		expectedWaits.until(ExpectedConditions.visibilityOfElementLocated(locator));
+	//Implici Wait
+	public void implicitWait(int timeout){
+		driver.manage().timeouts().implicitlyWait(timeout, TimeUnit.SECONDS);
 	}
 	
-	public void waitUntilElementVisible(String title, int timeout){
+	//Page load
+	public void waitForPageLoad(int timeout){
+		driver.manage().timeouts().pageLoadTimeout(timeout, TimeUnit.SECONDS);
+	}
+	
+	// Explici wait
+	public void waitUntilElementVisible(By locator, int timeout) {
+		WebDriverWait expectedWaits = new WebDriverWait(driver, timeout);
+		expectedWaits.pollingEvery(3, TimeUnit.SECONDS);
+		expectedWaits.until(ExpectedConditions
+				.visibilityOfElementLocated(locator));
+	}
+
+	public void waitUntilElementVisible(String title, int timeout) {
 		WebDriverWait expectedWaits = new WebDriverWait(driver, timeout);
 		expectedWaits.pollingEvery(3, TimeUnit.SECONDS);
 		expectedWaits.until(ExpectedConditions.titleContains(title));
 	}
-	
-	//Fluent Wait
-	public void fluentWait(By locator){
-		
+
+	// Fluent Wait
+	public void fluentWait(By locator) {
+
 		wait = new FluentWait<WebDriver>(driver);
 		wait.withTimeout(30, TimeUnit.SECONDS);
 		wait.pollingEvery(3, TimeUnit.SECONDS);
 		wait.ignoring(NoSuchElementException.class);
-		
+
 		fwait = new Function<WebDriver, WebElement>() {
 
 			@Override
 			public WebElement apply(WebDriver arg0) {
-					return arg0.findElement(locator);
+				return arg0.findElement(locator);
 			}
 		};
 	}
-	
+
 	// Get value from text field
 	public String getValueFromTextField(String locator,
 			String attributeOfLocator, String info, String blocker,

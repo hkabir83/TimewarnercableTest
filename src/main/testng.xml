@@ -5,7 +5,7 @@
     <classes>
       <class name="com.timewarnercable.TimewarnercableTest.TS001_TC001_VerifyHeaderLinks"/>
       <class name="com.timewarnercable.TimewarnercableTest.TS001_TC002_VerifyInvalidLogin"/>
-      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocationZipcode"/>
+      <class name="com.timewarnercable.TimewarnercableTest.TS001_TC003_ValidateCurrentLocation"/>
       <class name="com.timewarnercable.TimewarnercableTest.TS001_TC004_ValidateSearchFunctionality"/>
       <class name="com.timewarnercable.TimewarnercableTest.TS001_TC005_ValidateInvalidEmailLogin"/>
     </classes>

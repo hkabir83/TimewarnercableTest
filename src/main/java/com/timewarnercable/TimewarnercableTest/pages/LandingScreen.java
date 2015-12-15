@@ -1,8 +1,6 @@
 package com.timewarnercable.TimewarnercableTest.pages;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,18 +12,15 @@ public class LandingScreen extends BasePage {
 	private static WebDriver driver = null;
 
 	// Attribute of locator
+	//For First Test Case
 	private String yourHome = "//div[@class='section list']/ul/li[1]//a";
-	// private String yourBusiness = "//div[@class='section list']/ul/li[2]//a";
-	// private String twcCentral = "//div[@class='section list']/ul/li[3]//a";
 	private String aboutUs = "//div[@class='section list']/ul/li[4]//a";
-	// private String investorRelations =
-	// "//div[@class='section list']/ul/li[5]//a";
-	// private String careers = "//div[@class='section list']/ul/li[6]//a";
-	// private String espanol = "//div[@class='section list']/ul/li[7]//a";*/
 	private String headerListXpath = "//div[@class='section list']/ul/li";
 	private String[] headerList = { "Your Home", "Your Business",
 			"TWC Central", "About Us", "Investor Relations", "Careers",
 			"Español" };
+	
+	//For Second Test Case Without Hover and With Hover
 	private String myAccountButton = "//div[@class='twc-new-nav list']/ul/li[4]//a";
 	private String username = "username";
 	private String password = "password";
@@ -34,28 +29,35 @@ public class LandingScreen extends BasePage {
 	private String errorMessage = "//div[@class='message']";
 	private String loginErrorMsg1 = "Sorry, that username and password combination does not exist. Would you like to try again?";
 	private String loginErrorMsg2 = "Sorry, we are still unable to validate that username and password combination. If you're not sure of your username or password, you can recover them below.";
+	
+	//For Third Test Case
 	private String locationIcon = "//div[@class='newIcons horizontal list']/descendant::div[4]/a/span[1]";
 	private String zipUnderLocationIcon = "//div[@class='newIcons horizontal list']/descendant::div[4]/a/span[2]";
-	private String locationOverlayTextField = "//div[@class='message-box']/descendant::input[position()=3]";
-	private String locationOverlayTextFieldAftUpd = "//div[@class='message-box']/descendant::input[position()=1]";
-	private String goButton = "//div[@class='message-box']/descendant::button[position()=3]";
-	private String goButtonAftUpdZip = "//div[@class='message-box']/descendant::button[position()=1]";
-	private String messageBox = "//div[@class='message-box']";
+	private String inputLocUpd = "//div[@class='twc-search-input-wrap']/input[contains(@placeholder,'Update')]";
+	private String inputLocReEnt = "//div[@class='twc-search-input-wrap']/input[contains(@placeholder,'Re-Enter')]";
+	private String customerLoc = "//div[@class='twc-customerLocation']";
+	private String partialGoButton = "/following-sibling::div/button";
 	private String locationErrorMsg = "//div[@class='parsys oof-error-content']/self::div//p[2]";
-	// private String locationErrorMsg =
-	// "//div[@class='parsys oof-error-content']/descendant::p[2]";
-	private String currentLocation = "//div[@class='parsys localized-content']//p";
+	private String inputType = "input";
+	private String buttonType = "button";
+	
+	//For Fourth Test Case
 	private String searchButton = "//div[@class='section newHeaderIcons']/descendant::li[5]//a";
 	private String searchInpField = "//div[@class='message-box']/descendant::input[4]";
 	private String searchGoButton = "//div[@class='message-box']/descendant::button[4]";
 	private String searchResultText = "//div[@class='results searchResults']/span";
 	private String searchResultErrorText = "//div[@class='noResultsText']/p";
+	
+	//For Fifth Test Case
 	private String emailIcon = "//div[@class='section newHeaderIcons']/descendant::li[3]//a";
 	private String enterEmailInputField = "//table[@class='mainPanelInBodyTableFormatting']/descendant::td[@class='mainPanelComposeMailPadding3'][1]/input";
 	private String enterEmailPassInputField = "//table[@class='mainPanelInBodyTableFormatting']/descendant::td[@class='mainPanelComposeMailPadding3'][2]/input";
 	private String emailLogin = "//input[@id='loginButton']";
 	private String emailErrMsg = "//div[@class='webmailErrorInfoTxt']";
+	
+	//Other
 	private String assertErrorMessage = "ActualResult and Expected did not match";
+	
 
 	public LandingScreen(WebDriver driver) {
 		this.driver = driver;
@@ -64,7 +66,7 @@ public class LandingScreen extends BasePage {
 	public void clickOnAboutUs() {
 		clickButton(getXpath(), aboutUs, "Click on about us link", getNo(),
 				"Unable to click on About Us link");
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		waitForPageLoad(10);
 	}
 
 	public void clickOnMyAccountButton() {
@@ -84,35 +86,20 @@ public class LandingScreen extends BasePage {
 	}
 
 	public void clickOnLocationIcon() {
-
-		boolean msgBox = displayWebElement(getXpath(), messageBox);
-		boolean currLoc = displayWebElement(getXpath(), currentLocation);
-
-		if (!currLoc) {
-			if(!msgBox){
+		
+		if(!(displayWebElement(getXpath(), customerLoc))){
 			clickButton(getXpath(), locationIcon, "Click on location icon",
 					getYes(), "Unable to click on Location Icon");
-			}
-		}
-			
+			}			
 	}
 
 	public void clickOnGoButton() {
-		boolean currLoc = displayWebElement(getXpath(), currentLocation);
-		if (!currLoc) {
-			clickButton(getXpath(), goButton, "Click on GO button", getYes(),
-					"Unable click on Go button");
-		} else {
-			clickButton(getXpath(), goButtonAftUpdZip, "Click on GO button",
-					getYes(), "Unable click on Go button");
-		}
+		
+		String clickGo = selectLocationInput(buttonType);
+		clickButton(getXpath(), clickGo, "Click on GO button",
+				getYes(), "Unable click on Go button");
 	}
 
-	public void clickOnGoButtonAftUpdZip() {
-		clickButton(getXpath(), goButtonAftUpdZip,
-				"Click on GO button after updated zip", getYes(),
-				"Unable to click on Go button after update zip code");
-	}
 
 	public void clickOnSearchIcon() {
 		clickButton(getXpath(), searchButton, "Search icon clicked", getYes(),
@@ -178,42 +165,23 @@ public class LandingScreen extends BasePage {
 	}
 
 	public void enterZipCode(String value) {
-		boolean currLoc = displayWebElement(getXpath(), currentLocation);
-		if (!currLoc) {
-			enterDataIntoTextField(getXpath(), locationOverlayTextField, value,
-					"Enter zip code " + value, getYes(),
-					"Unable to enter zip code");
-		} else {
-			enterDataIntoTextField(getXpath(), locationOverlayTextFieldAftUpd,
-					value, "Enter zip code " + value, getYes(),
-					"Unable to enter zip code");
-		}
+			
+		String entLacation = selectLocationInput(inputType);
+		enterDataIntoTextField(getXpath(), entLacation,
+				value, "Enter zip code " + value, getYes(),
+				"Unable to enter zip code");
 	}
 
-	public void enterUpdateZipCode(String value) {
-		enterDataIntoTextField(getXpath(), locationOverlayTextFieldAftUpd,
-				value, "Enter Invalid zip code " + value, getYes(),
-				"Unable to enter another zip code");
-	}
+	
 
-	public void clearLocationZipcodeTextField() {
-		boolean currLoc = displayWebElement(getXpath(), currentLocation);
-		if (!currLoc) {
-			clearTextField(getXpath(), locationOverlayTextField,
-					"Cleared location zip code input field", getNo(),
-					"Unable to find location zip code input field");
-		} else {
-			clearTextField(getXpath(), locationOverlayTextFieldAftUpd,
-					"Cleared location zip code input field", getNo(),
-					"Unable to find location zip code input field");
-		}
-	}
-
-	public void clearLocationZipcodeTextFieldAftUpdZip() {
-		clearTextField(getXpath(), locationOverlayTextFieldAftUpd,
+	public void clearLocationZipcodeTextField() {	
+		
+		String locationInput = selectLocationInput(inputType);
+		clearTextField(getXpath(), locationInput,
 				"Cleared location zip code input field", getNo(),
-				"Unable to find location zip code input field after update zip");
+				"Unable to find location zip code input field");
 	}
+
 
 	public void verifyHeaderLinks() {
 
@@ -230,37 +198,7 @@ public class LandingScreen extends BasePage {
 		}
 	}
 
-	/*
-	 * public void verifyLinksTitleOnPageHeader() { String yourhome =
-	 * getPageText(getXpath(), yourHome, "Got your home text", getNo(),
-	 * "Unable to find your home text"); String yourbusiness =
-	 * getPageText(getXpath(), yourBusiness, "Got your business text", getNo(),
-	 * "Unable to find your business text"); String twccentral =
-	 * getPageText(getXpath(),twcCentral, "Got TWC Central text", getNo(),
-	 * "Unable to find TWC Central text"); String aboutus =
-	 * getPageText(getXpath(), aboutUs, "Got About Us text", getNo(),
-	 * "Unable to find About US text"); String investorrelations =
-	 * getPageText(getXpath(), investorRelations,"Got Investor Relations text",
-	 * getNo(), "Unable to find Investor Relations text"); String career =
-	 * getPageText(getXpath(), careers, "Got Careers text", getNo(),
-	 * "Unable to find Careers text"); String espan = getPageText(getXpath(),
-	 * espanol, "Got Español text", getNo(), "Unable to find Español text");
-	 * 
-	 * assertValue(yourhome,
-	 * "Your Home","Verify Your Home on Page Header",getNo(),
-	 * assertErrorMessage); assertValue(yourbusiness,
-	 * "Your Business","Verify Your Business on Page Header",getNo()
-	 * ,assertErrorMessage); assertValue(twccentral, "TWC Central",
-	 * "Verify TWC Central on Page Header",getNo(), assertErrorMessage);
-	 * assertValue(aboutus, "About Us",
-	 * "Verify About Us on Page Header",getNo(), assertErrorMessage);
-	 * assertValue(investorrelations, "Investor Relations",
-	 * "Verify Investor Relations on Page Header",getNo(), assertErrorMessage);
-	 * assertValue(career, "Careers", "Verify Careers on Page Header",getNo(),
-	 * assertErrorMessage); assertValue(espan, "Español",
-	 * "Verify Español on Page Header",getNo(), assertErrorMessage); }
-	 */
-
+	
 	public void verifyYourHomeAsDefaultPage() {
 		String previousUrl = driver.getCurrentUrl();
 		clickButton(getXpath(), yourHome, "Your Home link clicked", getNo(),
@@ -301,40 +239,43 @@ public class LandingScreen extends BasePage {
 				"Got zip code under location", getNo(),
 				"Unable to find zip code under location");
 		if (!zip.isEmpty()) {
-			assertValue(true, "Verify Zip code under location icon", getNo(),
+			assertValue(true, "Verify Zip code "+zip+" under location icon", getNo(),
 					assertErrorMessage);
 		} else {
-			assertValue(false, "Verify Zip code under location icon", getNo(),
+			assertValue(false, "Verify Zip code "+zip+" under location icon", getNo(),
 					assertErrorMessage);
 		}
 	}
 
 	public void verifyUpdatedZipcodeUnderLocationIcon() {
-
-		boolean currLoc = displayWebElement(getXpath(), currentLocation);
-
-		if (!currLoc) {
-			clickButton(getXpath(), locationIcon, "Location Icon clicked",
+		
+		implicitWait(10);
+		
+		if(!(displayWebElement(getXpath(), customerLoc))){
+			clickButton(getXpath(), locationIcon, "Click on location icon",
 					getYes(), "Unable to click on Location Icon");
-		}
-
+			}
+		
+		String locationInput = selectLocationInput(inputType);
+				
 		String updZip = getPageText(getXpath(), zipUnderLocationIcon,
 				"Got zip code under location", getNo(),
 				"Unable to find zip code under location");
+		System.out.println(updZip);
 		String inputtedZip = getValueFromTextField(getXpath(),
-				locationOverlayTextField,
+				locationInput,
 				"Got inputted zip code from location input field", getNo(),
 				"Unable to retrieve inputted zip code from location input field");
 
+		System.out.println(inputtedZip);
 		assertValue(updZip, inputtedZip,
-				"Verify updated zip code under location icon", getNo(),
+				"Verify updated zip code "+updZip+" under location icon", getNo(),
 				assertErrorMessage);
+		
 	}
 
 	public void verifyErrorMessageOnLocationOverlay() {
-		
-		//waitUntilElementVisible(By.xpath(locationErrorMsg), 30);
-		
+				
 		fluentWait(By.xpath(locationErrorMsg));
 		wait.until(fwait).getText();
 		
@@ -393,4 +334,29 @@ public class LandingScreen extends BasePage {
 		assertValue(actualResult, expected, "Email Error Message Verified",
 				getNo(), assertErrorMessage);
 	}
+	
+	
+	public String selectLocationInput(String xpathType){
+				
+			if(displayWebElement(getXpath(), locationErrorMsg)){
+				if(xpathType.equalsIgnoreCase("input")){
+					return inputLocReEnt;
+				}else if(xpathType.equalsIgnoreCase("button")){
+					return inputLocReEnt+partialGoButton;
+				}else{
+					return null;
+				}
+			}else{
+				if(xpathType.equalsIgnoreCase("input")){
+					return inputLocUpd;
+				}else if(xpathType.equalsIgnoreCase("button")){
+					return inputLocUpd+partialGoButton;
+				}else{
+					return null;
+				}
+			}
+		
+		
+	}
+	
 }
