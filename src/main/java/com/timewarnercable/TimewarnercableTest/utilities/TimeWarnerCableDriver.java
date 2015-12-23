@@ -17,6 +17,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -55,6 +56,9 @@ public abstract class TimeWarnerCableDriver {
 			driver = new ChromeDriver(options);
 		}else if("safari".equalsIgnoreCase(file.getBrowser())) {
 			driver = new SafariDriver();
+		}else if("ie".equalsIgnoreCase(file.getBrowser())) {
+			System.setProperty("webdriver.ie.driver", new File("IEDriverServer_x64").getAbsolutePath()+"/IEDriverServer.exe");
+			driver = new InternetExplorerDriver();
 		}else {
 			driver = new HtmlUnitDriver();
 		}
